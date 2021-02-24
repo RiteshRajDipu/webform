@@ -3,10 +3,9 @@ const pool = require("../../config/database");
 module.exports = {
     create: (data, callBack) => {
         pool.query(
-         `insert into studs(id, firstName, lastName, email, number, university, college, year, branch, USN, gender, adress)
-                     values(?,?,?,?,?,?,?,?,?,?,?,?)`,
+         `insert into studs(firstName, lastName, email, number, university, college, year, branch, USN, gender, adress)
+                     values(?,?,?,?,?,?,?,?,?,?,?)`,
           [
-              data.id,
               data.first_name,
               data.last_name,
               data.email,
